@@ -1,3 +1,5 @@
+# Setup TLS
+[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
 function Disable-InternetExplorerESC {
     $AdminKey = "HKLM:\SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}"
     $UserKey = "HKLM:\SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A8-37EF-4b3f-8CFC-4F3A74704073}"
@@ -16,5 +18,5 @@ Expand-Archive -LiteralPath 'C:\MCW.zip' -DestinationPath 'C:\hands-on-lab' -For
 
 # Download and install SQL Server Management Studio
 Invoke-WebRequest 'https://go.microsoft.com/fwlink/?linkid=2105412' -OutFile 'C:\SSMS-Setup.exe'
-$pathArgs = {C:\SSMS-Setup.exe /Install /Quiet /Norestart /Logs log.txt}
+$pathArgs = { C:\SSMS-Setup.exe /Install /Quiet /Norestart /Logs log.txt }
 Invoke-Command -ScriptBlock $pathArgs
