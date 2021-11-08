@@ -1,0 +1,26 @@
+{
+    "Name": "DMS Role - App ID",
+    "IsCustom": true,
+    "Description": "DMS App ID access to complete MI migrations",
+    "Actions": [
+          "Microsoft.Storage/storageAccounts/read",
+          "Microsoft.Storage/storageAccounts/listKeys/action",
+          "Microsoft.Storage/storageaccounts/blobservices/read",
+          "Microsoft.Storage/storageaccounts/blobservices/write",
+          "Microsoft.Sql/managedInstances/read",
+          "Microsoft.Sql/managedInstances/write",
+          "Microsoft.Sql/managedInstances/databases/read",
+          "Microsoft.Sql/managedInstances/databases/write",
+          "Microsoft.Sql/managedInstances/databases/delete",
+          "Microsoft.Sql/managedInstances/metrics/read",
+          "Microsoft.DataMigration/locations/*",
+          "Microsoft.DataMigration/services/*"
+    ],
+    "NotActions": [
+    ],
+    "AssignableScopes": [
+      "/subscriptions/<subscription_id>/ResourceGroups/<StorageAccount_rg_name>",
+      "/subscriptions/<subscription_id>/ResourceGroups/<ManagedInstance_rg_name>",
+      "/subscriptions/<subscription_id>/ResourceGroups/<DMS_rg_name>"
+    ]
+  }
