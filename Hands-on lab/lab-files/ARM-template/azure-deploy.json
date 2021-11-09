@@ -62,7 +62,7 @@
         }
     },
     "variables": {
-        "location": "[resourceGroup().location]",
+        "location": "southeastasia",
         "uniqueManagedInstanceName": "[concat(parameters('managedInstanceName'), '-', uniqueString(resourceGroup().id))]",
         "storageAccountName": "[concat('sqlmistore', uniqueString(resourceGroup().id))]",
         "skuName": "BC_Gen5",

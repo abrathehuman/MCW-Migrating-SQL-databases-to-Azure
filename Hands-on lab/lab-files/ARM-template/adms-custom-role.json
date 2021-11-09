@@ -1,26 +1,17 @@
 {
-    "Name": "DMS Role - App ID",
-    "IsCustom": true,
-    "Description": "DMS App ID access to complete MI migrations",
-    "Actions": [
-          "Microsoft.Storage/storageAccounts/read",
-          "Microsoft.Storage/storageAccounts/listKeys/action",
-          "Microsoft.Storage/storageaccounts/blobservices/read",
-          "Microsoft.Storage/storageaccounts/blobservices/write",
-          "Microsoft.Sql/managedInstances/read",
-          "Microsoft.Sql/managedInstances/write",
-          "Microsoft.Sql/managedInstances/databases/read",
-          "Microsoft.Sql/managedInstances/databases/write",
-          "Microsoft.Sql/managedInstances/databases/delete",
-          "Microsoft.Sql/managedInstances/metrics/read",
-          "Microsoft.DataMigration/locations/*",
-          "Microsoft.DataMigration/services/*"
+    "roleName": "DMS Role - App ID",
+    "isCustom": true,
+    "description": "DMS App ID access to complete MI migrations",
+    "actions": [
+          "*"
     ],
-    "NotActions": [
+    "notActions": [
+      "Microsoft.Blueprint/blueprintAssignments/write",
+      "Microsoft.Blueprint/blueprintAssignments/delete",
+      "Microsoft.Compute/galleries/share/action"
     ],
-    "AssignableScopes": [
-      "/subscriptions/<subscription_id>/ResourceGroups/<StorageAccount_rg_name>",
-      "/subscriptions/<subscription_id>/ResourceGroups/<ManagedInstance_rg_name>",
-      "/subscriptions/<subscription_id>/ResourceGroups/<DMS_rg_name>"
+    "dataActions": [],
+    "assignableScopes": [
+      "/subscriptions/2bcb9f3d-3f6b-4a90-a49e-86d3141c7f73/ResourceGroups/Lingaro_abrahamcuyong_2111090003_aefe7"
     ]
   }
